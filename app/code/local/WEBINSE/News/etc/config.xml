@@ -71,4 +71,13 @@
         </resources>
 
     </global>
+    <default>
+        <webinsenews>
+            <webinse_news_group>
+                <webinse_num_input>100</webinse_num_input>
+                <webinse_news_input>5</webinse_news_input>
+                <webinse_date_input>0</webinse_date_input>
+            </webinse_news_group>
+        </webinsenews>
+    </default>
 </config>
