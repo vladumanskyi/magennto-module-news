@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<config>
+    <menu>
+        <webinsenews module="webinse_news">
+            <title>News</title>
+            <sort_order>77</sort_order>
+            <!--<action>webinsenews_admin/adminhtml_news</action>-->
+            <children>
+                <webinsenews_news translate="title" module="webinse_news">
+                    <title>All News</title>
+                    <sort_order>10</sort_order>
+                    <action>webinsenews_admin/adminhtml_news</action>
+                </webinsenews_news>
+                <webinsenews_add translate="title" module="webinse_news">
+                    <title>Add News</title>
+                    <sort_order>20</sort_order>
+                    <action>webinsenews_admin/adminhtml_news/new/</action>
+                </webinsenews_add>
+                <webinsenews_config translate="title" module="webinse_news">
+                    <title>Configuration</title>
+                    <sort_order>30</sort_order>
+                    <action>adminhtml/system_config/edit/section/webinsenews/</action>
+                </webinsenews_config>
+            </children>
+        </webinsenews>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <webinsenews  translate="label" module="webinse_news">
+                                        <title>News Configuration</title>
+                                    </webinsenews>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <default>
+        <webinsenews>
+            <webinse_news_group>
+                <webinse_num_input>100</webinse_num_input>
+                <webinse_news_input>5</webinse_news_input>
+                <webinse_date_input>0</webinse_date_input>
+            </webinse_news_group>
+        </webinsenews>
+    </default>
+</config>

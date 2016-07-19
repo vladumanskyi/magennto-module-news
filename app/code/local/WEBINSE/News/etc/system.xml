@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<config>
+    <tabs>
+        <webinse_news_tab>
+            <label>News configuration</label>
+            <sort_order>100000</sort_order>
+        </webinse_news_tab>
+    </tabs>
+    <sections>
+        <webinsenews translate="label" module="webinse_news">
+            <label>Configuration</label>
+            <tab>webinse_news_tab</tab>
+            <frontend_type></frontend_type>
+            <sort_order>910</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <webinse_news_group translate="label">
+                    <label>Configuration news</label>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <webinse_num_input translate="label">
+                            <label>Content num text </label>
+                            <comment>Only number</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </webinse_num_input>
+                        <webinse_news_input translate="label">
+                            <label>Numbers news on page: </label>
+                            <comment>Only number</comment>
+                            <validate>validate-number</validate>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </webinse_news_input>
+                        <webinse_date_input translate="label">
+                            <label>Set date: </label>
+                            <comment>1/0</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </webinse_date_input>
+                    </fields>
+                </webinse_news_group>
+            </groups>
+        </webinsenews>
+    </sections>
+</config>

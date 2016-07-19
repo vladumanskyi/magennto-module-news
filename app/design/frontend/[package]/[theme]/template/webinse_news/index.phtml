@@ -1,0 +1,37 @@
+<?php
+    $newsViewUrl = Mage::getUrl('news/index/view');
+    $collection = $this->getCollection();
+?>
+<section class="container">
+    <div class="row">
+        <div>
+            <h1 class="text-center"><?php echo $this->__('News') ?></h1>
+        </div>
+        <?php if($collection->getSize()): ?>
+            <?php foreach ($collection as $item): ?>
+                <article class="col-sm-12">
+                    <h2>
+
+                        <a href="<?php echo $newsViewUrl; ?>?id=<?php echo $item->getId(); ?>">
+                            <?php echo $item->getTitle(); ?>
+                        </a>
+                    </h2>
+                    <div class="article">
+                        <?php
+                        echo (!empty(Mage::registry('symb_cont'))) ? substr($item->getContent(),0,Mage::registry('symb_cont')) : substr($item->getContent(),0,10);
+                        ?>
+                    </div>
+                    <div class="read-more">
+                        <a class="btn btn-default" href="<?php echo $newsViewUrl; ?>?id=<?php echo $item->getId(); ?>">
+                            <span>Read More</span>
+                        </a>
+                    </div>
+                    <div id="date" class="text-right"><h4><?php echo (Mage::registry('date_created') == 1) ? $item->getDateCreated() : '';  ?></h4></div>
+                </article>
+            <?php endforeach; ?>
+            <?php echo $this->getPagerHtml(); ?>
+        <?php else: ?>
+            <p><?php echo $this->__('The collection is empty.'); ?></p>
+        <?php endif ?>
+    </div>
+</section>

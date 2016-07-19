@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <WEBINSE_News>
+            <version>0.0.1</version>
+        </WEBINSE_News>
+    </modules>
+    <!-- Admin part start-->
+    <admin>
+        <routers>
+            <webinsenews_admin>
+                <use>admin</use>
+                <args>
+                    <module>WEBINSE_News</module>
+                    <frontName>webinsenews_admin</frontName>
+                </args>
+            </webinsenews_admin>
+        </routers>
+    </admin>
+
+    <!-- Admin part end -->
+    <frontend>
+        <layout>
+            <updates>
+                <webinse_news>
+                    <file>webinse_news.xml</file>
+                </webinse_news>
+            </updates>
+        </layout>
+        <routers>
+            <webinse_news>
+                <use>standard</use>
+                <args>
+                    <module>WEBINSE_News</module>
+                    <frontName>news</frontName>
+                </args>
+            </webinse_news>
+        </routers>
+    </frontend>
+    <global>
+        <helpers>
+            <webinse_news>
+                <class>WEBINSE_News_Helper</class>
+            </webinse_news>
+        </helpers>
+        <blocks>
+            <webinse_news>
+                <class>WEBINSE_News_Block</class>
+            </webinse_news>
+        </blocks>
+        <models>
+            <webinse_news>
+                <class>WEBINSE_News_Model</class>
+                <resourceModel>webinse_news_resource</resourceModel>
+            </webinse_news>
+            <webinse_news_resource>
+                <class>WEBINSE_News_Model_Resource</class>
+                <entities>
+                    <table_news>
+                        <table>webinse_news</table>
+                    </table_news>
+                </entities>
+            </webinse_news_resource>
+        </models>
+        <resources>
+            <webinse_news_setup>
+                <setup>
+                    <module>WEBINSE_News</module>
+                </setup>
+            </webinse_news_setup>
+        </resources>
+
+    </global>
+</config>

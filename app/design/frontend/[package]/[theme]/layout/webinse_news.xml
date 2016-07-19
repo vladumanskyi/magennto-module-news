@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addLinkRel">
+                <rel>stylesheet</rel>
+                <href>http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css</href>
+            </action>
+        </reference>
+        <reference name="top.links">
+        <action method="addLink" translate="label title">
+            <label>News</label>
+            <url>news</url>
+            <title>News</title>
+            <prepare>true</prepare>
+            <position>2</position>
+        </action>
+    </reference>
+    </default>
+    <webinse_news_index_index>
+        <reference name="content">
+            <block type="webinse_news/news" template="webinse_news/index.phtml" />
+        </reference>
+    </webinse_news_index_index>
+    <webinse_news_index_view>
+        <reference name="content">
+            <block type="webinse_news/view" name="news.content" template="webinse_news/view.phtml" />
+        </reference>
+    </webinse_news_index_view>
+</layout>
